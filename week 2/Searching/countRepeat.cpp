@@ -2,6 +2,9 @@
 
 using namespace std;
 
+
+// complexity for finding the count is O(log N)
+// using binary seach
 int startingIndex(int *arr,int low,int high,int n,int x){
 
     int mid = (low + high)/2;
