@@ -1,21 +1,28 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 
-int solve(bool * arr, int n){
+int solve(int *arr,int n){
+  set<int> Hash;
+  int index{-1};
   for(int i=0;i<n;i++)
-    if(arr[i]==true)
-      return i;
-  return -1;
+  {
+    if(Hash.find(arr[i]) != Hash.end())
+    {
+      index = i;break;
+    }
+    else{
+      Hash.insert(arr[i]);
+    }
+  }
+
 }
 int main(){
-  int t;  cin>>t;
-  while(t--){
   int n;  cin>>n;
-  bool *arr = new bool[n];
+  int *ar = new int[n];
 
-  for(int i=0;i<n;i++)cin>>arr[i];
+  for(int i=0;i<n;i++)
+    cin>>ar[i];
 
-  cout<<solve(arr,n)<<endl;
-}
+  cout<<solve(ar,n);
+
 }
