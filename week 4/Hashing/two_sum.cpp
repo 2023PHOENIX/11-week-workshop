@@ -12,7 +12,7 @@ bool solve(int *arr,int n,int sum){
 
         if(map.find(temp)!=map.end())
             return true;
-        
+
         else{
             map.insert(arr[i]);
         }

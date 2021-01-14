@@ -9,7 +9,7 @@ vector<int> solve(int *arr,int n){
 
     for(int i=0;i<n;i++)
         map[arr[i]]++;
-    
+
     vector<int> a;
 
     for(int i=0;i<n;i++){
@@ -18,6 +18,7 @@ vector<int> solve(int *arr,int n){
     }
     return a;
 }
+
 
 int main()
 {
